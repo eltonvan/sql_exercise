@@ -12,7 +12,6 @@ for i in range(int(user_num)):
     country = faker.country()
     data = (username, email, birthdate, country)
     data_lst.append(data)
-data_lst[:-1] = data_lst[:-1][:-2]
 con = sqlite3.connect("users.db")
 cur = con.cursor()
 cur.execute(

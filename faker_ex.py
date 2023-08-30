@@ -1,5 +1,5 @@
 from faker import Faker
-import sqlite3
+
 
 faker = Faker()
 
@@ -21,7 +21,7 @@ for i in range(5):
         email = faker.email()
         birthdate = faker.date()
         country = faker.country()
-        data += f"('{username}', '{email}', '{birthdate}', '{country}'),\n"
+        data += f"('{username}', '{email}', '{birthdate}', '{country}')."
 
 
 sql_file = open("data.sql", "w")
